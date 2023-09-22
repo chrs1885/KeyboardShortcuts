@@ -26,7 +26,7 @@ extension KeyboardShortcuts {
 	```
 	*/
 	public final class RecorderCocoa: NSSearchField, NSSearchFieldDelegate {
-		private let minimumWidth = 130.0
+		private let minimumWidth = 250
 		private let onChange: ((_ shortcut: Shortcut?) -> Void)?
 		private var canBecomeKey = false
 		private var eventMonitor: LocalEventMonitor?
@@ -63,7 +63,6 @@ extension KeyboardShortcuts {
 		/// :nodoc:
 		override public var intrinsicContentSize: CGSize {
 			var size = super.intrinsicContentSize
-			size.width = minimumWidth
 			return size
 		}
 
